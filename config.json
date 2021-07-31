@@ -1,0 +1,24 @@
+{
+  "bindings": [
+    {
+      "type": "httpTrigger",
+      "authLevel": "anonymous",
+      "direction": "in",
+      "name": "req",
+      "methods": ["get"]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "cosmosDB",
+      "direction": "in",
+      "name": "stocks",
+      "ConnectionStringSetting": "AzureCosmosDBConnectionString",
+      "databaseName": "stocksdb",
+      "collectionName": "stocks"
+    }
+  ]
+}
